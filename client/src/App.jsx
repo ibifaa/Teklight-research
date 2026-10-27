@@ -10,6 +10,8 @@ import TopicDetail from "./pages/TopicDetail.jsx";
 import MaterialsPage from "./pages/MaterialsPage.jsx";
 import MaterialDetail from "./pages/MaterialDetail.jsx";
 import Auth from "./pages/Auth.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import AdminDashboard from "./pages/AdminDashboard.jsx";
 
 export default function App() {
   const [page, setPage] = useState("home");
@@ -38,6 +40,13 @@ export default function App() {
 
   const renderPage = () => {
     switch (page) {
+
+      case "dashboard":
+        return <Dashboard go={go} />;
+
+      case "admin":
+        return <AdminDashboard go={go} />;
+
       case "home":
         return <Home go={go} />;
 
@@ -55,6 +64,8 @@ export default function App() {
 
       case "materials":
         return <MaterialsPage go={go} />;
+
+      
 
       case "material":
         return (

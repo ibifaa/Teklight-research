@@ -35,13 +35,16 @@ export default function Auth({ go, initialMode = "signin" }) {
     });
   };
 
-  const submit = (event) => {
-    event.preventDefault();
-    setSubmitted(true);
+ const submit = (event) => {
+  event.preventDefault();
 
-    // Connect this form to your Express authentication API later.
-  };
+  if (!isRegister) {
+    go("dashboard");
+    return;
+  }
 
+  setSubmitted(true);
+};
   return (
     <main className="min-h-screen bg-[#f3f7fc] lg:grid lg:grid-cols-2">
       {/* Left branding panel */}

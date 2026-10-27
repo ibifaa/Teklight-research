@@ -176,6 +176,7 @@ export default function Home({ go }) {
 </section>
 
 
+
       <section className="section disciplines">
         <div className="container">
           <SectionHead eyebrow="Explore fields" title="Browse by discipline" copy="Start with your area of study and discover ideas worth investigating." action={<button className="link-button" onClick={() => go("topics")}>View all disciplines <Icon name="arrow" size={16} /></button>} />
@@ -230,6 +231,7 @@ export default function Home({ go }) {
           </div>
         </div>
       </section>
+      
     </main>
   );
 }
